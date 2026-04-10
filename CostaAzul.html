@@ -30,16 +30,13 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Typography */
   h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.1; }
   p { font-weight: 300; color: var(--ink-mid); }
   .uppercase { text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.75rem; font-weight: 500; }
 
-  /* Layout Elements */
   .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
   section { padding: 100px 0; border-bottom: 1px solid var(--border); }
   
-  /* Hero Section */
   .hero {
     height: 90vh;
     display: flex;
@@ -55,9 +52,7 @@
   }
 
   .hero h1 { font-size: clamp(3.5rem, 8vw, 6rem); margin: 20px 0; font-style: italic; }
-  .hero-meta { color: var(--gold-light); }
 
-  /* Navigation Bar */
   nav {
     position: sticky;
     top: 0;
@@ -68,57 +63,26 @@
     padding: 20px 0;
   }
 
-  .nav-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
+  .nav-content { display: flex; justify-content: space-between; align-items: center; }
   .nav-links { display: flex; gap: 30px; }
-  .nav-links a { 
-    text-decoration: none; 
-    color: var(--ink); 
-    font-size: 0.7rem; 
-    text-transform: uppercase; 
-    letter-spacing: 0.1em;
-    transition: color 0.3s;
-  }
+  .nav-links a { text-decoration: none; color: var(--ink); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; transition: color 0.3s; }
   .nav-links a:hover { color: var(--gold); }
 
-  /* Services Grid */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    margin-top: 60px;
-  }
-
-  .service-card {
-    padding: 30px;
-    border: 1px solid var(--border);
-    transition: all 0.4s ease;
-    background: white;
-  }
-
-  .service-card:hover {
-    border-color: var(--gold);
-    transform: translateY(-5px);
-  }
-
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 60px; }
+  .service-card { padding: 30px; border: 1px solid var(--border); transition: all 0.4s ease; background: white; }
+  .service-card:hover { border-color: var(--gold); transform: translateY(-5px); }
   .service-card i { color: var(--gold); font-size: 1.5rem; margin-bottom: 20px; display: block; }
   .service-card h3 { font-size: 1.8rem; margin-bottom: 15px; }
   .service-card ul { list-style: none; margin-top: 15px; }
   .service-card li { font-size: 0.9rem; margin-bottom: 8px; color: var(--ink-mid); position: relative; padding-left: 20px; }
   .service-card li::before { content: '—'; position: absolute; left: 0; color: var(--gold); }
 
-  /* Fee Table */
   .table-container { margin-top: 50px; overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; font-family: var(--sans); }
   th { text-align: left; padding: 20px; border-bottom: 2px solid var(--gold); color: var(--ink); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; }
   td { padding: 20px; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
   .fee-highlight { color: var(--gold); font-weight: 500; font-family: var(--serif); font-size: 1.2rem; }
 
-  /* Highlight Section */
   .highlight-box {
     background: var(--gold-pale);
     padding: 60px;
@@ -126,33 +90,12 @@
     border-radius: 2px;
     margin: 40px 0;
   }
-
   .highlight-box h2 { font-size: 2.5rem; margin-bottom: 20px; font-style: italic; }
 
-  /* Footer & Validity */
-  footer {
-    padding: 80px 0;
-    text-align: center;
-    background: var(--ink);
-    color: var(--white);
-  }
+  footer { padding: 80px 0; text-align: center; background: var(--ink); color: var(--white); }
+  .validity-tag { display: inline-block; padding: 10px 25px; border: 1px solid var(--gold); color: var(--gold); margin-top: 30px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; }
 
-  .validity-tag {
-    display: inline-block;
-    padding: 10px 25px;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    margin-top: 30px;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-  }
-
-  @media (max-width: 900px) {
-    .services-grid { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 3rem; }
-    .nav-links { display: none; }
-  }
+  @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 3rem; } .nav-links { display: none; } }
 </style>
 </head>
 <body>
@@ -172,7 +115,6 @@
         <a href="#vision">Visión</a>
         <a href="#servicios">Servicios</a>
         <a href="#comercial">Condiciones</a>
-        <a href="#proceso">Proceso</a>
       </div>
     </div>
   </nav>
@@ -184,12 +126,8 @@
         Transformamos una propiedad en un <span style="font-style: italic; color: var(--gold);">activo financiero</span> líquido y escalable.
       </h2>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
-        <p>
-          Presentamos a <strong>Corporación AKLK, S.R.L.</strong> un ecosistema diseñado para mitigar el riesgo operativo y maximizar el retorno de inversión del solar en Costa Azul. Nuestra intervención no es transaccional, es de gestión integral.
-        </p>
-        <p>
-          Desde la captación de fondos en etapas tempranas hasta la aceleración comercial mediante tecnología de vanguardia, actuamos como el motor que impulsa el proyecto hacia su consolidación financiera.
-        </p>
+        <p>Presentamos a <strong>Corporación AKLK, S.R.L.</strong> un ecosistema diseñado para mitigar el riesgo operativo y maximizar el retorno de inversión del solar en Costa Azul. Nuestra intervención no es transaccional, es de gestión integral.</p>
+        <p>Desde la captación de fondos hasta la aceleración comercial mediante tecnología de vanguardia, impulsamos el proyecto hacia su consolidación financiera.</p>
       </div>
     </div>
   </section>
@@ -198,44 +136,32 @@
     <div class="container">
       <div class="uppercase" style="text-align: center; margin-bottom: 20px;">Alcance Operativo</div>
       <h2 style="text-align: center; font-size: 3rem; margin-bottom: 60px;">Nuestros Ejes de Valor</h2>
-      
       <div class="services-grid">
-        <!-- Pilar 1: Lender -->
         <div class="service-card">
           <i class="fa-solid fa-landmark"></i>
           <h3>Lender & Capital</h3>
-          <p>Aseguramos el combustible financiero del proyecto.</p>
           <ul>
-            <li>Club de Inversores 1512 (España/Europa).</li>
+            <li>Club de Inversores 1512.</li>
             <li>Captación etapa construcción.</li>
-            <li>Control de rendimientos y desembolsos.</li>
-            <li>Gestión de dividendos mediante Escrow.</li>
+            <li>Control de rendimientos.</li>
           </ul>
         </div>
-
-        <!-- Pilar 2: Project Management -->
         <div class="service-card">
           <i class="fa-solid fa-compass-drafting"></i>
           <h3>Project Management</h3>
-          <p>La excelencia técnica y legal en cada hito.</p>
           <ul>
-            <li>Licitación Desarrolladora y Arquitectura.</li>
-            <li>Control riguroso de proveedores y pagos.</li>
-            <li>Gestión CONFOTUR (Beneficios Fiscales).</li>
-            <li>Supervisión de licenciamientos.</li>
+            <li>Licitación y Arquitectura.</li>
+            <li>Gestión CONFOTUR.</li>
+            <li>Supervisión de pagos.</li>
           </ul>
         </div>
-
-        <!-- Pilar 3: Marketing & Ventas -->
         <div class="service-card">
           <i class="fa-solid fa-bolt"></i>
           <h3>Comercialización IA</h3>
-          <p>Aceleración de ventas con tecnología Tolvia.</p>
           <ul>
-            <li>Integración con Tolvia IA (Sales Manager).</li>
-            <li>Marketing inmobiliario & Social Media.</li>
-            <li>Eventos de captación y cierre.</li>
-            <li>Sales Manager In-house dedicado.</li>
+            <li>Integración Tolvia IA.</li>
+            <li>Marketing de Performance.</li>
+            <li>Sales Manager In-house.</li>
           </ul>
         </div>
       </div>
@@ -244,50 +170,20 @@
 
   <section id="comercial">
     <div class="container">
-      <div class="uppercase" style="margin-bottom: 20px;">Estructura Comercial</div>
-      <h2 style="font-size: 3rem; margin-bottom: 20px;">Condiciones de Colaboración</h2>
-      <p style="max-width: 700px;">Nuestro esquema de honorarios está diseñado para alinear nuestros intereses con el éxito del proyecto, minimizando el desembolso inicial del cliente.</p>
-      
+      <div class="uppercase" style="margin-bottom: 20px;">Condiciones</div>
       <div class="table-container">
         <table>
           <thead>
             <tr>
               <th>Servicio</th>
               <th>Honorarios</th>
-              <th>Periodicidad / Hito</th>
+              <th>Hito</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><strong>Servicio de Lender</strong></td>
-              <td class="fee-highlight">4% + 0.5% success</td>
-              <td>Al desembolso efectivo del capital</td>
-            </tr>
-            <tr>
-              <td><strong>Project Management</strong></td>
-              <td class="fee-highlight">€ 6,000 / mes</td>
-              <td>Primeros 18 meses (del capital captado)</td>
-            </tr>
-            <tr>
-              <td><strong>Ventas (IA / Ads)</strong></td>
-              <td class="fee-highlight">3.5%</td>
-              <td>Al abono del 30% del precio de venta</td>
-            </tr>
-            <tr>
-              <td><strong>Ventas (Club Inversores)</strong></td>
-              <td class="fee-highlight">2.5%</td>
-              <td>Al abono del 30% del precio de venta</td>
-            </tr>
-            <tr>
-              <td><strong>Coordinación MKT Online</strong></td>
-              <td class="fee-highlight">€ 2,500 / mes</td>
-              <td>Primeros 5 meses (del presupuesto inicial)</td>
-            </tr>
-            <tr>
-              <td><strong>Sales Manager In-house</strong></td>
-              <td class="fee-highlight">$ 50,000 RD / mes</td>
-              <td>Mensual durante etapa comercial</td>
-            </tr>
+            <tr><td><strong>Lender</strong></td><td class="fee-highlight">4% + 0.5%</td><td>Desembolso</td></tr>
+            <tr><td><strong>Project Management</strong></td><td class="fee-highlight">€ 6,000 / mes</td><td>18 meses</td></tr>
+            <tr><td><strong>Ventas IA</strong></td><td class="fee-highlight">3.5%</td><td>Al 30% cobrado</td></tr>
           </tbody>
         </table>
       </div>
@@ -297,7 +193,7 @@
   <section style="border-bottom: none;">
     <div class="container">
       <div class="highlight-box">
-        <div class="uppercase" style="color: var(--ink-light); margin-bottom: 15px;">Compromiso Caribbean Collection</div>
+        <div class="uppercase" style="color: var(--gold); margin-bottom: 15px;">Compromiso Caribbean Collection</div>
         <h2>"Reemplazamos la incertidumbre por la precisión de la IA agéntica: una experiencia de compra líquida, autónoma y humana."</h2>
       </div>
     </div>
@@ -306,18 +202,7 @@
   <footer>
     <div class="container">
       <div class="uppercase" style="color: var(--gold); margin-bottom: 20px;">Marina de Rojas Investments S.R.L.</div>
-      <h2 style="font-size: 2.5rem; color: var(--white); margin-bottom: 20px;">Construyamos el mañana de Costa Azul.</h2>
-      <p style="color: var(--ink-light); max-width: 500px; margin: 0 auto 30px;">
-        Propuesta preparada exclusivamente para Alejandro Hurtado y Enrique Céspedes.
-      </p>
-      
-      <div class="validity-tag">
-        Oferta válida por 15 días naturales
-      </div>
-      
-      <div style="margin-top: 60px; font-size: 0.75rem; color: var(--ink-light);" class="uppercase">
-        Santo Domingo · Puerto Plata · 2026
-      </div>
+      <div class="validity-tag">Oferta válida por 15 días</div>
     </div>
   </footer>
 
