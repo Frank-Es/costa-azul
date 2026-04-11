@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Villas Costa Azul · Plan de Ejecución Ágil 20 Meses</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+<style>
+  :root {
+    --gold: #B89A6A;
+    --gold-light: #D4B896;
+    --gold-pale: #F5EFE6;
+    --ink: #1A1611;
+    --ink-mid: #5C5349;
+    --ink-light: #9C9088;
+    --white: #FDFCFA;
+    --border: rgba(184,154,106,0.25);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--white);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.1; }
+  p { font-weight: 300; color: var(--ink-mid); }
+  .uppercase { text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.75rem; font-weight: 500; }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+  section { padding: 80px 0; border-bottom: 1px solid var(--border); }
+  
+  .hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(26, 22, 17, 0.6), rgba(26, 22, 17, 0.6)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+  }
+  .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin: 20px 0; font-style: italic; }
+
+  nav {
+    position: sticky;
+    top: 0;
+    background: rgba(253, 252, 250, 0.98);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+    padding: 15px 0;
+  }
+  .nav-content { display: flex; justify-content: space-between; align-items: center; }
+  .nav-links a { text-decoration: none; color: var(--ink); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; margin-left: 20px; }
+
+  .timeline-container { position: relative; margin-top: 50px; padding-left: 30px; border-left: 1px solid var(--gold-light); }
+  .timeline-item { position: relative; margin-bottom: 40px; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -36px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+  .timeline-date { color: var(--gold); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 5px; display: block; }
+  .timeline-content h3 { font-size: 1.5rem; margin-bottom: 10px; }
+  .timeline-content p { font-size: 0.95rem; max-width: 700px; }
+
+  .phase-prep {
+    background: var(--gold-pale);
+    border-left: 4px solid var(--gold);
+    padding: 40px;
+    margin: 40px 0;
+  }
+
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 40px; }
+  .feature-card { padding: 30px; border: 1px solid var(--border); background: #fff; text-align: center; }
+  .feature-card i { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; display: block; }
+
+  .villa-model { border: 1px solid var(--border); padding: 20px; background: #fff; margin-top: 50px; text-align: center;}
+  .villa-model img { width: 100%; max-height: 400px; object-fit: contain; }
+
+  footer { padding: 60px 0; text-align: center; background: var(--ink); color: var(--white); }
+
+  @media (max-width: 768px) { .nav-links { display: none; } }
+</style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="uppercase">Eficiencia y Velocidad</div>
+    <h1>Cronograma Maestro Costa Azul</h1>
+    <p style="max-width: 700px; font-style: italic; font-family: var(--serif); font-size: 1.4rem;">Entrega optimizada en 20 meses mediante tecnología constructiva ágil y mitigación legal de 180 días.</p>
+  </header>
+
+  <nav>
+    <div class="container nav-content">
+      <div class="uppercase" style="color: var(--gold); font-weight: 600;">Plan de Ejecución 2026-2028</div>
+      <div class="nav-links">
+        <a href="#prep">Fase 180 Días</a>
+        <a href="#timeline">Cronograma</a>
+        <a href="#partners">Alianzas</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="prep">
+    <div class="container">
+      <div class="uppercase" style="margin-bottom: 20px; color: var(--gold);">Garantía Legal y Financiera</div>
+      <h2 style="font-size: 3rem; margin-bottom: 30px;">Ventana de Permisos y Fondeo</h2>
+      
+      <div class="phase-prep">
+        <div style="display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;">
+          <div>
+            <h3 style="font-size: 2rem; margin-bottom: 15px;">Blindaje de los 180 Días</h3>
+            <p>Dada la ausencia actual de permisos, hemos estructurado un "runway" de 6 meses dedicados exclusivamente al cumplimiento normativo y a la seguridad de capital.</p>
+            <ul style="margin-top: 20px; list-style: none;">
+              <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color: var(--gold);"></i> <strong>Gestión Permisos:</strong> Auditoría y trámites para licenciamiento ambiental y de construcción.</li>
+              <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color: var(--gold);"></i> <strong>Fondeo Bullet:</strong> Cierre de la operación con <strong>Club1512.com</strong> para asegurar capital de terminación.</li>
+              <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color: var(--gold);"></i> <strong>Hito Ventas:</strong> Lanzamiento del modelo híbrido orientado a captar **500 leads** calificados con Tolvia.</li>
+            </ul>
+          </div>
+          <div style="text-align: center; border: 1px solid var(--gold); padding: 30px; background: #fff;">
+            <span style="font-size: 3.5rem; color: var(--gold); display: block; line-height: 1;">180</span>
+            <span class="uppercase">Días de<br>Blindaje</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <div class="container">
+      <div class="uppercase" style="margin-bottom: 20px;">Línea de Tiempo Operativa (Desde Permisos)</div>
+      <h2 style="font-size: 3rem; margin-bottom: 50px;">Ruta Ágil hacia la <span style="font-style: italic;">Entrega Final</span></h2>
+
+      <div class="timeline-container">
+        <div class="timeline-item">
+          <span class="timeline-date">Mes 01 - 06</span>
+          <div class="timeline-content">
+            <h3>Licitación y Setup Tecnológico</h3>
+            <p>Lanzamiento de licitación arquitectónica para el modelo prefabricado. Entrenamiento de IA Olivia Tolvia con los 500 leads como meta y setup del equipo de ventas in-house.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span class="timeline-date">Mes 06</span>
+          <div class="timeline-content">
+            <h3>Cierre de Fondeo y Otorgamiento</h3>
+            <p>Con los permisos al día, adjudicación del proyecto. Confirmación de capital vía Club 1512 y validación del flujo de preventas para el Fly & Buy.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span class="timeline-date">Mes 07 - 16</span>
+          <div class="timeline-content">
+            <h3>Construcción Industrializada y Obra Ágil</h3>
+            <p>Ensamblaje e instalación de las villas prefabricadas. Ejecución de Casa Club. Reducción significativa de tiempos de obra civil tradicional.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span class="timeline-date">Mes 16 - 20</span>
+          <div class="timeline-content">
+            <h3>Interiorismo y Entrega de Llaves</h3>
+            <p>Intervención de <strong>Julia Luise Koehler</strong> para acabados de lujo y garantía alemana. Entrega de unidades y cierre administrativo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="partners">
+    <div class="containers">
+        <div class="uppercase" style="margin-bottom: 40px; text-align: center;">El Concepto constructivo</div>
+        <div class="villa-model">
+            <img src="https://images.unsplash.com/photo-1544161513-0179fe746fd5?auto=format&fit=crop&q=80&w=1000" alt="Villas Prefabricadas Modernas">
+            <p class="uppercase" style="margin-top: 20px; color: var(--gold);">Villas Costa Azul: Prefabricado de Lujo</p>
+            <p style="margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">Nuestro modelo integra estructuras modulares de alto nivel, permitiendo abaratar costos operativos y reducir el tiempo de obra en más de un 20% sin comprometer la estética premium.</p>
+        </div>
+    </div>
+  </section>
+
+  <section style="text-align: center; border: none; background: #fafafa;">
+    <div class="container">
+      <div class="uppercase" style="margin-bottom: 40px; opacity: 0.6;">Instituciones que respaldan la ejecución</div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; opacity: 0.5;">
+        <span style="font-family: var(--serif); font-size: 1.2rem;">MARINA DE ROJAS</span>
+        <span style="font-family: var(--serif); font-size: 1.2rem;">KOEHLER ASSETS</span>
+        <span style="font-family: var(--serif); font-size: 1.2rem;">CLUB 1512</span>
+        <span style="font-family: var(--serif); font-size: 1.2rem;">PROEXCA</span>
+        <span style="font-family: var(--serif); font-size: 1.2rem;">TOLVIA AI</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="uppercase" style="color: var(--gold); margin-bottom: 20px;">Villas Costa Azul · 2026</div>
+      <p style="font-size: 0.8rem; opacity: 0.6;">© Marina de Rojas Investments S.R.L. · Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+```
+
