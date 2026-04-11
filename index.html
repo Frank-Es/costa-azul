@@ -319,6 +319,31 @@
         Puerto Plata · Dominican Republic · 2026
       </div>
     </div>
+    ### Paso 2: Añade el botón a tu `index.html` actual de Costa Azul
+Busca el final de tu `index.html` actual de Costa Azul y pega este bloque justo antes del `</footer>`:
+
+```html
+<section style="padding: 40px 0; border-top: 1px solid var(--border); text-align: center; background: var(--white);">
+  <div class="container">
+    <p class="uppercase" style="margin-bottom: 20px; font-size: 0.65rem; color: var(--gold);">Estrategia Ágil de Ejecución</p>
+    <a href="roadmap-costa-azul.html" style="
+      display: inline-block;
+      padding: 18px 40px;
+      background: var(--ink);
+      color: var(--gold-light);
+      text-decoration: none;
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border: 1px solid var(--gold);
+      transition: all 0.4s ease;
+    " onmouseover="this.style.background='#B89A6A'; this.style.color='#fff';" 
+       onmouseout="this.style.background='#1A1611'; this.style.color='#D4B896';">
+      Explorar Plan de 20 Meses (Desde Permisos) <i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i>
+    </a>
+  </div>
+</section>
   </footer>
 
 </body>
