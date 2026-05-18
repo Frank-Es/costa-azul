@@ -3,347 +3,211 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Villas Costa Azul · Propuesta Estratégica</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+<title>WÁ Cabarete · Inversión Estratégica en el Caribe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,300&family=Jost:wght@300;400;500;600&family=DM+Mono:wght@400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --gold: #B89A6A;
-    --gold-light: #D4B896;
-    --gold-pale: #F5EFE6;
-    --ink: #1A1611;
-    --ink-mid: #5C5349;
-    --ink-light: #9C9088;
-    --white: #FDFCFA;
-    --border: rgba(184,154,106,0.25);
-    --serif: 'Cormorant Garamond', Georgia, serif;
-    --sans: 'DM Sans', system-ui, sans-serif;
-  }
+/* --- CORE STYLES --- */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+:root{
+  --ink:#0F1C2E; --ink2:#162338; --cr:#FDFAF5; --go:#C9A84C; --gol:#E8D5A3;
+  --tc:#5BA4A4; --mu:#6B7E99; --tx:#D8E4F0; --ru:rgba(255,255,255,.07);
+  --fd:'Playfair Display',serif; --fu:'Jost',sans-serif; --fm:'DM Mono',monospace; --fs:'Syne',sans-serif;
+}
+body{background:var(--ink);color:var(--tx);font-family:var(--fu);font-weight:300;line-height:1.6;overflow-x:hidden}
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+/* --- NAV --- */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 clamp(1rem,4vw,4rem);display:flex;align-items:center;justify-content:space-between;height:65px;transition:all 0.4s ease}
+nav.sc{background:rgba(15,28,46,0.95);backdrop-filter:blur(15px);border-bottom:1px solid var(--ru)}
+.nlogo{font-family:var(--fd);font-size:1.6rem;font-weight:900;color:var(--cr);text-decoration:none;letter-spacing:-0.02em}
+.nlogo em{font-style:italic;font-weight:300;color:var(--go)}
+.ncta{font-family:var(--fm);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;padding:10px 20px;background:var(--go);color:var(--ink);border:none;cursor:pointer;font-weight:600;text-decoration:none;transition:0.3s}
+.ncta:hover{background:var(--gol)}
 
-  body {
-    background: var(--white);
-    color: var(--ink);
-    font-family: var(--sans);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
+/* --- HERO --- */
+.hero{min-height:100vh;position:relative;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(1.5rem,5vw,5rem)}
+.hbg{position:absolute;inset:0;overflow:hidden;z-index:1}
+.hbg img{width:100%;height:100%;object-fit:cover;animation:hzoom 25s ease-out forwards}
+@keyframes hzoom{from{transform:scale(1.15)}to{transform:scale(1)}}
+.hbg::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(15,28,46,0.8) 0%,rgba(15,28,46,0.2) 60%,rgba(15,28,46,0.9) 100%)}
+.hc{position:relative;z-index:2;max-width:800px}
+.hey{font-family:var(--fm);font-size:9px;letter-spacing:0.4em;text-transform:uppercase;color:var(--go);margin-bottom:1.5rem;display:block}
+.hh{font-family:var(--fd);font-size:clamp(55px,12vw,110px);font-weight:900;color:var(--cr);line-height:0.85;margin-bottom:1.5rem;letter-spacing:-0.03em}
+.hh em{font-style:italic;font-weight:300;color:var(--go)}
 
-  /* Typography */
-  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.1; }
-  p { font-weight: 300; color: var(--ink-mid); }
-  .uppercase { text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.75rem; font-weight: 500; }
+/* --- STATS BAR --- */
+.sbar{display:grid;grid-template-columns:repeat(3,1fr);background:var(--ink2);border-bottom:1px solid var(--ru);position:relative;z-index:10}
+.st{padding:2rem 1rem;text-align:center;border-right:1px solid var(--ru)}
+.stn{font-family:var(--fs);font-size:1.5rem;font-weight:800;color:var(--go)}
+.stl{font-family:var(--fm);font-size:7px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mu);margin-top:0.5rem}
 
-  /* Layout Elements */
-  .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
-  section { padding: 100px 0; border-bottom: 1px solid var(--border); }
-  
-  /* Hero Section */
-  .hero {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(rgba(26, 22, 17, 0.4), rgba(26, 22, 17, 0.4)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000');
-    background-size: cover;
-    background-position: center;
-    color: var(--white);
-    border-bottom: none;
-  }
+/* --- SECTIONS --- */
+.sec{padding:clamp(4rem,10vw,8rem) clamp(1.5rem,5vw,5rem);border-bottom:1px solid var(--ru)}
+.ey{font-family:var(--fm);font-size:8px;letter-spacing:0.3em;text-transform:uppercase;color:var(--go);margin-bottom:1rem;display:flex;align-items:center;gap:15px}
+.ey::before{content:'';width:30px;height:1px;background:var(--go)}
+.st2{font-family:var(--fd);font-size:clamp(32px,5vw,52px);font-weight:700;line-height:1.1;color:var(--cr);margin-bottom:2rem}
+.st2 em{font-style:italic;font-weight:300;color:var(--gol)}
+.sd{font-family:var(--fu);font-size:18px;line-height:1.7;color:var(--mu);max-width:750px;margin-bottom:3rem}
 
-  .hero h1 { font-size: clamp(3.5rem, 8vw, 6rem); margin: 20px 0; font-style: italic; }
-  .hero-meta { color: var(--gold-light); }
+/* --- LAYOUTS --- */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.img-box{position:relative;overflow:hidden;border:1px solid var(--ru);height:100%}
+.img-box img{width:100%;height:100%;object-fit:cover;display:block;transition:0.6s ease}
+.img-box:hover img{transform:scale(1.03)}
+.img-label{position:absolute;bottom:15px;left:15px;font-family:var(--fm);font-size:8px;color:var(--cr);background:rgba(15,28,46,0.8);padding:5px 10px;backdrop-filter:blur(5px);z-index:5}
 
-  /* Navigation Bar */
-  nav {
-    position: sticky;
-    top: 0;
-    background: rgba(253, 252, 250, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-    z-index: 100;
-    padding: 20px 0;
-  }
+/* --- TIERED GRID (Villa & Interior) --- */
+.tiered-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:15px;margin-top:3rem;height:650px}
+.tiered-stack{display:flex;flex-direction:column;gap:15px}
+.tiered-stack .img-box{height:calc(50% - 7.5px)}
 
-  .nav-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.loc-list{list-style:none;margin-top:2rem}
+.loc-item{display:flex;gap:15px;margin-bottom:1.2rem;align-items:flex-start}
+.loc-icon{color:var(--go);font-size:1.2rem}
+.loc-txt{font-size:15px;color:var(--tx)}
+.loc-txt strong{display:block;color:var(--cr);font-family:var(--fm);font-size:10px;letter-spacing:0.1em;margin-bottom:3px}
 
-  .nav-links { display: flex; gap: 30px; }
-  .nav-links a { 
-    text-decoration: none; 
-    color: var(--ink); 
-    font-size: 0.7rem; 
-    text-transform: uppercase; 
-    letter-spacing: 0.1em;
-    transition: color 0.3s;
-  }
-  .nav-links a:hover { color: var(--gold); }
+/* --- FOOTER --- */
+footer{padding:4rem clamp(1.5rem,5vw,5rem);background:var(--ink2);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem}
+.wa-btn{background:#25D366;color:white;padding:15px 30px;border-radius:50px;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:10px;transition:0.3s}
+.wa-btn:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(37,211,102,0.2)}
 
-  /* Services Grid */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    margin-top: 60px;
-  }
-
-  .service-card {
-    padding: 30px;
-    border: 1px solid var(--border);
-    transition: all 0.4s ease;
-    background: white;
-  }
-
-  .service-card:hover {
-    border-color: var(--gold);
-    transform: translateY(-5px);
-  }
-
-  .service-card i { color: var(--gold); font-size: 1.5rem; margin-bottom: 20px; display: block; }
-  .service-card h3 { font-size: 1.8rem; margin-bottom: 15px; }
-  .service-card ul { list-style: none; margin-top: 15px; }
-  .service-card li { font-size: 0.9rem; margin-bottom: 8px; color: var(--ink-mid); position: relative; padding-left: 20px; }
-  .service-card li::before { content: '—'; position: absolute; left: 0; color: var(--gold); }
-
-  /* Fee Table */
-  .table-container { margin-top: 50px; overflow-x: auto; }
-  table { width: 100%; border-collapse: collapse; font-family: var(--sans); }
-  th { text-align: left; padding: 20px; border-bottom: 2px solid var(--gold); color: var(--ink); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; }
-  td { padding: 20px; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
-  .fee-highlight { color: var(--gold); font-weight: 500; font-family: var(--serif); font-size: 1.2rem; }
-
-  /* Highlight Section */
-  .highlight-box {
-    background: var(--gold-pale);
-    padding: 60px;
-    text-align: center;
-    border-radius: 2px;
-    margin: 40px 0;
-  }
-
-  .highlight-box h2 { font-size: 2.5rem; margin-bottom: 20px; font-style: italic; }
-
-  /* Footer & Validity */
-  footer {
-    padding: 80px 0;
-    text-align: center;
-    background: var(--ink);
-    color: var(--white);
-  }
-
-  .validity-tag {
-    display: inline-block;
-    padding: 10px 25px;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    margin-top: 30px;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-  }
-
-  @media (max-width: 900px) {
-    .services-grid { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 3rem; }
-    .nav-links { display: none; }
-  }
+@media(max-width:900px){
+  .g2, .tiered-grid{grid-template-columns:1fr; height:auto}
+  .tiered-grid{display:flex; flex-direction:column}
+  .tiered-stack{height:auto}
+  .tiered-stack .img-box{height:300px}
+  .sbar{grid-template-columns:1fr}
+  .st{border-right:none;border-bottom:1px solid var(--ru)}
+}
 </style>
 </head>
 <body>
 
-  <header class="hero">
-    <div class="hero-meta uppercase">Propuesta Estratégica · 2026</div>
-    <h1>Villas Costa Azul</h1>
-    <p style="color: var(--white); font-size: 1.2rem; max-width: 600px; margin-top: 20px; font-family: var(--serif); font-style: italic;">
-      Una alianza estratégica para el desarrollo inmobiliario de alto impacto en la Costa Norte.
-    </p>
-  </header>
+<nav id="nav">
+  <a href="#" class="nlogo">W<em>Á</em> Cabarete</a>
+  <a href="https://wa.me/18294324884" class="ncta">Contacto Directo</a>
+</nav>
 
-  <nav>
-    <div class="container nav-content">
-      <div class="uppercase" style="font-size: 0.9rem; color: var(--gold);">CC · Real Estate</div>
-      <div class="nav-links">
-        <a href="#vision">Visión</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#comercial">Condiciones</a>
-        <a href="#proceso">Proceso</a>
-      </div>
-    </div>
-  </nav>
-
-  <section id="vision">
-    <div class="container">
-      <div class="uppercase" style="margin-bottom: 20px;">El Concepto</div>
-      <h2 style="font-size: 3.5rem; max-width: 800px; margin-bottom: 40px;">
-        Transformamos una propiedad en un <span style="font-style: italic; color: var(--gold);">activo financiero</span> líquido y escalable.
-      </h2>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
-        <p>
-          Presentamos a <strong>Corporación AKLK, S.R.L.</strong> un ecosistema diseñado para mitigar el riesgo operativo y maximizar el retorno de inversión del solar en Costa Azul. Nuestra intervención no es transaccional, es de gestión integral.
-        </p>
-        <p>
-          Desde la captación de fondos en etapas tempranas hasta la aceleración comercial mediante tecnología de vanguardia, actuamos como el motor que impulsa el proyecto hacia su consolidación financiera.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="servicios" style="background: #fff;">
-    <div class="container">
-      <div class="uppercase" style="text-align: center; margin-bottom: 20px;">Alcance Operativo</div>
-      <h2 style="text-align: center; font-size: 3rem; margin-bottom: 60px;">Nuestros Ejes de Valor</h2>
-      
-      <div class="services-grid">
-        <!-- Pilar 1: Lender -->
-        <div class="service-card">
-          <i class="fa-solid fa-landmark"></i>
-          <h3>Lender & Capital</h3>
-          <p>Aseguramos el combustible financiero del proyecto.</p>
-          <ul>
-            <li>Club de Inversores 1512 (España/Europa).</li>
-            <li>Captación etapa construcción.</li>
-            <li>Control de rendimientos y desembolsos.</li>
-            <li>Gestión de dividendos mediante Escrow.</li>
-          </ul>
-        </div>
-
-        <!-- Pilar 2: Project Management -->
-        <div class="service-card">
-          <i class="fa-solid fa-compass-drafting"></i>
-          <h3>Project Management</h3>
-          <p>La excelencia técnica y legal en cada hito.</p>
-          <ul>
-            <li>Licitación Desarrolladora y Arquitectura.</li>
-            <li>Control riguroso de proveedores y pagos.</li>
-            <li>Gestión CONFOTUR (Beneficios Fiscales).</li>
-            <li>Supervisión de licenciamientos.</li>
-          </ul>
-        </div>
-
-        <!-- Pilar 3: Marketing & Ventas -->
-        <div class="service-card">
-          <i class="fa-solid fa-bolt"></i>
-          <h3>Comercialización IA</h3>
-          <p>Aceleración de ventas con tecnología Tolvia.</p>
-          <ul>
-            <li>Integración con Tolvia IA (Sales Manager).</li>
-            <li>Marketing inmobiliario & Social Media.</li>
-            <li>Eventos de captación y cierre.</li>
-            <li>Sales Manager In-house dedicado.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="comercial">
-    <div class="container">
-      <div class="uppercase" style="margin-bottom: 20px;">Estructura Comercial</div>
-      <h2 style="font-size: 3rem; margin-bottom: 20px;">Condiciones de Colaboración</h2>
-      <p style="max-width: 700px;">Nuestro esquema de honorarios está diseñado para alinear nuestros intereses con el éxito del proyecto, minimizando el desembolso inicial del cliente.</p>
-      
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Servicio</th>
-              <th>Honorarios</th>
-              <th>Periodicidad / Hito</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Servicio de Lender</strong></td>
-              <td class="fee-highlight">4% + 0.5% success</td>
-              <td>Al desembolso efectivo del capital</td>
-            </tr>
-            <tr>
-              <td><strong>Project Management</strong></td>
-              <td class="fee-highlight">€ 6,000 / mes</td>
-              <td>Primeros 18 meses (del capital captado)</td>
-            </tr>
-            <tr>
-              <td><strong>Ventas (IA / Ads)</strong></td>
-              <td class="fee-highlight">3.5%</td>
-              <td>Al abono del 30% del precio de venta</td>
-            </tr>
-            <tr>
-              <td><strong>Ventas (Club Inversores)</strong></td>
-              <td class="fee-highlight">2.5%</td>
-              <td>Al abono del 30% del precio de venta</td>
-            </tr>
-            <tr>
-              <td><strong>Coordinación MKT Online</strong></td>
-              <td class="fee-highlight">€ 2,500 / mes</td>
-              <td>Primeros 5 meses (del presupuesto inicial)</td>
-            </tr>
-            <tr>
-              <td><strong>Sales Manager In-house</strong></td>
-              <td class="fee-highlight">$ 50,000 RD / mes</td>
-              <td>Mensual durante etapa comercial</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <section style="border-bottom: none;">
-    <div class="container">
-      <div class="highlight-box">
-        <div class="uppercase" style="color: var(--ink-light); margin-bottom: 15px;">Compromiso Caribbean Collection</div>
-        <h2>"Reemplazamos la incertidumbre por la precisión de la IA agéntica: una experiencia de compra líquida, autónoma y humana."</h2>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="uppercase" style="color: var(--gold); margin-bottom: 20px;">Marina de Rojas Investments S.R.L.</div>
-      <h2 style="font-size: 2.5rem; color: var(--white); margin-bottom: 20px;">Construyamos el mañana de Costa Azul.</h2>
-      <p style="color: var(--ink-light); max-width: 500px; margin: 0 auto 30px;">
-        Propuesta preparada exclusivamente para Alejandro Hurtado y Enrique Céspedes.
-      </p>
-      
-      <div class="validity-tag">
-        Oferta válida por 15 días naturales
-      </div>
-      
-      <div style="margin-top: 60px; font-size: 0.75rem; color: var(--ink-light);" class="uppercase">
-        Puerto Plata · Dominican Republic · 2026
-      </div>
-    </div>
-  </footer>
-
-
-<section style="padding: 40px 0; border-top: 1px solid var(--border); text-align: center; background: var(--white);">
-  <div class="container">
-    <p class="uppercase" style="margin-bottom: 20px; font-size: 0.65rem; color: var(--gold);">Estrategia Ágil de Ejecución</p>
-    <a href="roadmap-costa-azul.html" style="
-      display: inline-block;
-      padding: 18px 40px;
-      background: var(--ink);
-      color: var(--gold-light);
-      text-decoration: none;
-      font-family: var(--sans);
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      border: 1px solid var(--gold);
-      transition: all 0.4s ease;
-    " onmouseover="this.style.background='#B89A6A'; this.style.color='#fff';" 
-       onmouseout="this.style.background='#1A1611'; this.style.color='#D4B896';">
-      Explorar Plan de 20 Meses (Desde Permisos) <i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i>
+<!-- HERO -->
+<section class="hero">
+  <div class="hbg">
+    <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1779116467/WhatsApp_Image_2026-05-18_at_16.58.35_qrwv7m.jpg" alt="WÁ Cabarete Portada">
+  </div>
+  <div class="hc">
+    <span class="hey">Exclusividad en Sosúa · 2026</span>
+    <h1 class="hh">W<em>Á</em><br>Cabarete</h1>
+    <p class="sd" style="color:var(--cr); opacity:0.9; max-width:500px">15 Villas Boutique redefiniendo el lujo Med-Boho en el corazón de la Costa del Ámbar.</p>
+    <a href="https://wa.me/18294324884" class="wa-btn">
+      <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+      Invertir por WhatsApp
     </a>
   </div>
 </section>
-  </footer>
+
+<!-- STATS -->
+<div class="sbar">
+  <div class="st"><div class="stn">20.2%</div><div class="stl">ROI Neto Anual</div></div>
+  <div class="st"><div class="stn">+65%</div><div class="stl">Plusvalía</div></div>
+  <div class="st" style="border:none"><div class="stn">5.7a</div><div class="stl">Payback Estimado</div></div>
+</div>
+
+<!-- UBICACIÓN ESTRATÉGICA -->
+<section class="sec" id="location">
+  <div class="g2">
+    <div>
+      <div class="ey">Ubicación Privilege</div>
+      <h2 class="st2">Corredor Turístico de<br><em>Mayor Crecimiento</em></h2>
+      <p class="sd">Ubicado estratégicamente en la <strong>Costa del Ámbar</strong>, Costa Azul es el refugio preferido para nómadas digitales y familias de perfil premium.</p>
+      
+      <div class="loc-list">
+        <div class="loc-item">
+          <div class="loc-icon">📍</div>
+          <div class="loc-txt"><strong>ENTORNO</strong>Costa Azul: Refugio estratégico para nómadas digitales y familias premium.</div>
+        </div>
+        <div class="loc-item">
+          <div class="loc-icon">🏖️</div>
+          <div class="loc-txt"><strong>PROXIMIDAD</strong>A pasos de las playas más icónicas y vibrantes del Caribe.</div>
+        </div>
+        <div class="loc-item">
+          <div class="loc-icon">🛡️</div>
+          <div class="loc-txt"><strong>SEGURIDAD</strong>Seguridad controlada 24/7 y plusvalía consolidada en la zona.</div>
+        </div>
+      </div>
+    </div>
+    <div class="img-box" style="height: 450px;">
+      <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1779116467/WhatsApp_Image_2026-05-18_at_16.56.57_1_sqezio.jpg" alt="Master Plan Cenital WÁ">
+      <div class="img-label">PLANTA CENITAL · MASTER PLAN</div>
+    </div>
+  </div>
+</section>
+
+<!-- VILLA & INTERIOR -->
+<section class="sec" style="background:var(--ink2)">
+  <div class="ey">Arquitectura & Estilo</div>
+  <h2 class="st2">Diseño Med-Boho Chic<br><em>Alma Caribeña</em></h2>
+  <p class="sd">Una fusión perfecta entre la geometría limpia del Mediterráneo y las texturas naturales del Caribe. Espacios diseñados para maximizar la luz y la rentabilidad en plataformas premium.</p>
+
+  <div class="tiered-grid">
+    <!-- IMAGEN GRANDE IZQUIERDA -->
+    <div class="img-box">
+      <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1779116467/WhatsApp_Image_2026-05-18_at_16.56.58_prsfg7.jpg" alt="Villa Modelo Exterior">
+      <div class="img-label">EXTERIOR · VILLA MODELO</div>
+    </div>
+    
+    <!-- STACK DERECHA -->
+    <div class="tiered-stack">
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1779116467/WhatsApp_Image_2026-05-18_at_16.56.58_1_v7dzwo.jpg" alt="Salón Interior">
+        <div class="img-label">INTERIOR · SALÓN ESTANCIA</div>
+      </div>
+      <div class="img-box">
+        <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1779116467/WhatsApp_Image_2026-05-18_at_16.56.57_ot6byp.jpg" alt="Laguna Central Atardecer">
+        <div class="img-label">EXPERIENCIA · LAGUNA CENTRAL</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANOS -->
+<section class="sec">
+  <div class="g2">
+    <div class="img-box" style="height: 500px;">
+      <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1779116467/WhatsApp_Image_2026-05-18_at_16.56.58_2_r0ckzj.jpg" alt="Planos de la Villa">
+      <div class="img-label">PLANIMETRÍA · DISTRIBUCIÓN</div>
+    </div>
+    <div>
+      <div class="ey">Eficiencia Espacial</div>
+      <h2 class="st2">Distribución de<br><em>Alto Desempeño</em></h2>
+      <p class="sd">Nuestras villas optimizan cada m² para ofrecer suites independientes, permitiendo una gestión flexible y mayores tarifas por noche.</p>
+      <ul class="loc-list">
+        <li class="loc-item"><div class="loc-icon">✔️</div><div class="loc-txt"><strong>PLANTA BAJA</strong>Área social abierta conectada al jardín y terraza.</div></li>
+        <li class="loc-item"><div class="loc-icon">✔️</div><div class="loc-txt"><strong>PLANTA ALTA</strong>Dos suites master con balcón privado y baños en suite.</div></li>
+      </ul>
+      <a href="https://wa.me/18294324884" class="wa-btn" style="margin-top:2rem">Pedir Catálogo Completo</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="nlogo" style="margin-bottom:10px">W<em>Á</em> Cabarete</div>
+    <p style="font-size:12px; color:var(--mu); max-width:300px">Inversión inmobiliaria estratégica administrada por Caribbean Collection Real Estate.</p>
+  </div>
+  <div style="text-align:right">
+    <p style="font-family:var(--fm); font-size:10px; color:var(--go); letter-spacing:0.1em; margin-bottom:5px">CONTACTO DIRECTO</p>
+    <a href="tel:+18294324884" style="color:var(--cr); text-decoration:none; font-size:1.2rem; font-weight:600">+1 829 432 4884</a>
+    <p style="font-size:10px; color:var(--mu); margin-top:10px">COSTA AZUL · SOSÚA · REPÚBLICA DOMINICANA</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('sc',window.scrollY>50);
+});
+</script>
 
 </body>
 </html>
